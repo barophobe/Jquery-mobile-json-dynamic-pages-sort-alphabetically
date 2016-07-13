@@ -1,0 +1,52 @@
+<!--
+* Author: Edmond Connolly
+* Assignment: WI2.0 Mobile Development, Digital Skills Academy
+* Student ID: Apologies, ive looked through my moodle profile and course documentation and cannot find an id. I will contact student services straight   away and get it for the next assignment.
+* Date : 2015/08/18
+* Ref:  https://learn.jquery.com/jquery-mobile/theme-roller/,, http://www.wrichards.com/blog/2011/11/jquery-sorting-json-results/,, https://www.youtube.com/watch?v=pe6keTE9LbE,, Also various threads on stackoverflow prooved helpful but i didnt use anything specific from them.
+The site is live at   http://site327.webelevate.net/jquerymobile%20assesment/
+-->
+
+<HTML>
+   <head>
+    <title>Mobile</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1"> <!--making sure the page adjusts to device-->
+   <link href="css\themes\jquery.mobile-1.4.5.min.css" rel="stylesheet"><!--linking stylesheets in order required to function correctly -->
+   <link rel="stylesheet" href="css/themes/edstheme.css" />
+   <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css"/>
+   <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script><!--linking jquery cdn -->
+   <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script><!--linking jquerymobile cdn -->
+   <script type="text/javascript">
+	    function alphab(a,b){
+	    return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1; //sort function to order alphabetically as referenced from wrichards mentioned above
+	};
+     $(document).on('pageinit', '#home' ,function() {   //initialising document 
+    	$.getJSON("details.json", function(handle){        //call json data
+      		handle = $(handle).sort(alphab);                //calling sort function
+      		$.each(handle, function(index, handle){ 		//selecting json objects from array 
+                                                          // populating the collapsible list and creating dynamic pages with json data
+      		$('#listed').append('<li><a data-transition="flip" data-theme="b" class="ui-btn ui-icon-power ui-btn-icon-left"   href="#' + handle.id + '">' + handle.name + '</a></li>');
+          $('#dynoPages').append('<div data-role="page" data-theme="a" id="' + handle.id + '"><div data-role="header"><h1>' + handle.name + '</h1></div><div data-role="content">' + handle.Bio + '</div><div><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left data-transition="fade"">Home</a></div><div data-role="footer"></div></div>');
+          });
+           $('[data-role=listview]').listview('refresh');   //refreshing the list so json data is presented
+        });
+    });
+     </script>
+	</head>		
+  <body id="dynoPages">                                 <!--id attached to body so dynamic pages can be appended to it-->
+    <div data-role="page" id="home" data-theme="a">
+    <div data-role="header"><h1>Mobile</h1></div>
+    <div data-role="content">
+      <ul data-role="listview" data-corners="false" class="ui-listview-outer">           <!--collapsible list to use with json data-->
+         <li data-role="collapsible" data-iconpos="right" data-shadow="false" data-corners="false">
+            <h2>Pick A Name!</h2>                                <!--list after dropdown -->
+            <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="listed" data-filter="true"  data-autodividers="true">
+            </ul>
+         </li>
+      </ul>         
+    </div>
+    <div data-role="footer"><h4>Mobility</h4></div>
+    </div>
+	</body>
+</html>

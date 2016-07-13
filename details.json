@@ -1,0 +1,32 @@
+
+
+[
+  {
+    "id":"one",
+    "name":"David",
+    "Bio": "Since David McCallum's father, David McCallum Sr., was first violinist for the London Philharmonic and his mother, Dorothy Dorman, was a cellist, it's not surprising that David was originally headed for a career in music, playing oboe. He studied briefly at the Royal Academy of Music. He left that, however, for the Royal Academy of Dramatic Art. "},
+  {
+    "id":"two",
+    "name":"James",
+    "Bio":"James Byron Dean was born February 8, 1931 in Marion, Indiana, to Mildred Marie (Wilson) and Winton A. Dean, a farmer turned dental technician. His mother died when Dean was nine, and he was subsequently raised on a farm by his aunt and uncle in Fairmount, Indiana. After grade school, he moved to New York to pursue his dream of acting."},
+  {
+    "id":"three",
+    "name":"Paul",
+    "Bio": "Aaron Paul was born and raised in Emmett, Idaho, to Darla (Haynes) and Robert Sturtevant, a retired Baptist minister. While growing up, Paul took part in church programs, and performed in plays. He attended Centennial High School in Boise, Idaho. It was there, in eighth grade, that Aaron decided he wanted to become an actor. "
+  },
+  {
+    "id":"four",
+    "name":"Anita",
+    "Bio":"Kerstin Anita Marianne Ekberg was born on September 29, 1931 in Malmo, Sweden. Growing up with seven brothers and sisters was not an adventure, but Anita's adventure began when she was elected Miss Sweden in 1950."
+  },
+  {
+    "id":"five",
+    "name":"Dorothy",
+    "Bio": "Flashy, leggy, bouffant blonde Dorothy Provine was a solid screen representation of the Kennedyesque era -- when life seemed so full of fun, so innocent and so optimistic. This sparkling beauty also gave TV audiences a double dose blast to the past via her popular co-starring roles on late 50s/early 60s series TV"
+  },
+  {  
+    "id":"six",
+    "name":"Zoe",
+    "Bio":"Zoe Isabella Kravitz, the daughter of singer/actor Lenny Kravitz and actress Lisa Bonet, was born on December 1, 1988 in Los Angeles, California. She is of half African-American (from her father's mother and her mother's father) and half Ashkenazi Jewish (from her father's father and her mother's mother) descent. "
+  }
+]
